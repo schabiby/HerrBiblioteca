@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="login.js"></script>
+
+
+
+    <!-- import important lib -->
+    <script src="./lib/p5.min.js"></script>
+    <script src="./lib/p5.dom.min.js"></script>
+    <script src="./lib/p5.sound.min.js"></script>
+    <script src="./lib/p5.play.js"></script>
+
+    <script src="./lib/matter.min.js"></script>
+
+
+    <!-- database -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+
+    <script>
+      // La configuración de Firebase de tu aplicación werb.
+      const firebaseConfig = {
+  apiKey: "AIzaSyC1Ox_K730-8oRJLzD7lLBoPq2OalmZ8Sg",
+  authDomain: "bibliotecaherr.firebaseapp.com",
+  projectId: "bibliotecaherr",
+  storageBucket: "bibliotecaherr.appspot.com",
+  messagingSenderId: "122895299644",
+  appId: "1:122895299644:web:e0b3405180fca9108dbf39"
+};
+      // Inicia Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+
+
+
+
+    </head>
+  <body >
+    <main id="main-holder">
+        <h1 id="login-header">Login</h1>
+        
+        <div id="login-error-msg-holder">
+          <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+        </div>
+        
+        <form id="login-form">
+          <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+          <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+          <input type="submit" value="Login" id="login-form-submit">
+        </form>
+      
+      </main>
+
+    <script src="sketch.js"></script>
+</body>
+</html>
